@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# Todo React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, full-featured todo application built with React, TypeScript, Vite, and Tailwind CSS. This app helps users manage their tasks with user authentication, categorization, and intuitive dashboard insights.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Sign up and login functionality
+- **Todo Management**: Create, view, and organize todos
+- **Task Status Tracking**: Monitor tasks by status (New, In Progress, Completed)
+- **Dashboard**: Visual analytics with charts and statistics
+- **Favorites**: Mark and manage favorite todos
+- **Emoji Support**: Add emojis to todos for better organization
+- **Responsive Design**: Mobile-friendly UI with Tailwind CSS
+- **Real-time Notifications**: Toast notifications for user feedback
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: React 19 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **State Management**: React Context API
+- **HTTP Client**: Axios
+- **Routing**: React Router DOM
+- **Charts**: Recharts
+- **UI Icons**: Lucide React
+- **Notifications**: React Hot Toast
+- **Emoji Picker**: emoji-picker-react
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (v16+)
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Run the development server:
+```bash
+npm run dev
 ```
+
+The app will be available at `http://localhost:5173`
+
+### Build
+
+Build for production:
+```bash
+npm run build
+```
+
+### Preview
+
+Preview the production build:
+```bash
+npm run preview
+```
+
+### Linting
+
+Run ESLint:
+```bash
+npm run lint
+```
+
+## Project Structure
+
+- `src/pages/` - Application pages (Login, Signup, Home, Items)
+- `src/components/` - Reusable components
+- `src/context/` - React Context for state management
+- `src/hooks/` - Custom React hooks
+- `src/util/` - Utility functions and API configuration
+- `public/` - Static assets
+
+## Available Routes
+
+- `/` - Login page (default)
+- `/login` - Login page
+- `/signup` - Sign up page
+- `/dashboard` - Main dashboard with stats and favorites
+- `/todo-items` - Todo items list view
