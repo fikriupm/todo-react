@@ -61,7 +61,6 @@ const Login = () => {
 
     return (
       <div className= "h-screen w-full relative flex items-center justify-center overflow-hidden bg-slate-50">
-        {/*Background Image with blur*/}
         <div className="relative z-10 w-full max-w-lg px-6">
           <div className="bg-white bg-opacity95 backdrop-blur-sm rounded-lg shadow-2xl p-8 max-h-[90vh] overflow-y-auto">
           <h3 className="text-2xl font-semibold text-black text-center mb-2">
